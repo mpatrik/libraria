@@ -1,0 +1,23 @@
+.product-data {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.product-data textarea {
+    resize: none;
+    height: 300px;
+    
+}
+
+.add-product-btn {
+    display: block;
+    height: 50px;
+    width: 150px;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+.add-product-btn:hover {
+    color: var(--clr-secondary);
+    background: var(--clr-primary);
+}

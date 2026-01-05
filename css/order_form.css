@@ -1,0 +1,84 @@
+.order-form fieldset {
+    margin-top: 2rem;
+}
+
+.order-form h3 {
+    font-weight: 500;
+    margin-block: 24px 16px;
+    font-size: 1.5rem;
+}
+
+.customer-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+
+.inputarea {
+    position: relative;
+}
+
+.inputarea label {
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    padding-inline: 6px;
+    opacity: .5;
+    background: white;
+    font-size: .8rem;
+    transition: all .3s;
+    pointer-events: none;
+}
+
+.order-field {
+    width: 100%;
+    padding: 8px 12px;
+    border: 0;
+    outline: 1px solid #ccc;
+}
+
+.order-field:focus-visible {
+    outline: 2px solid var(--clr-secondary);
+}
+
+.inputarea .order-field:focus + label,
+.inputarea .order-field:not(:placeholder-shown) + label {
+    opacity: 1;
+    transform: translateY(-24px);
+    color: var(--clr-secondary);
+    font-size: .9rem;
+}
+
+.order-save-btn {
+    display: block;
+    margin-top: 3rem;
+    margin-left: auto;
+    font-weight: 500;
+    padding: .8rem 2rem;
+}
+
+.order-save-btn:hover,
+.order-save-btn:focus-visible {
+    background: var(--clr-primary);
+    color: var(--clr-secondary);
+}
+
+
+.order-error {
+    outline: 2px solid var(--clr-danger) !important;
+}
+
+.error-text {
+    font-size: .8rem;
+    color: var(--clr-danger);
+    position: absolute;
+    right: 0;
+    top: -18px;
+}
+
+@media (max-width: 600px) {
+    .customer-data {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+

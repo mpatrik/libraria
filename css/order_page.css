@@ -1,0 +1,28 @@
+.order {
+    width: 1300px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+
+.order-modal-icon {
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
+}
+
+.order-fail-icon {
+    color: var(--clr-danger);
+}
+
+.order-success-icon {
+    color: var(--clr-success);
+}
+
+
+
+@media (max-width: 1300px) {
+    .order {
+        width: 100%;
+    }
+}

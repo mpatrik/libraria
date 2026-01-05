@@ -1,0 +1,35 @@
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	
+	RewriteRule ^index\.php$ - [L]
+	
+	RewriteCond %{REQUEST_URI} !^/index.php
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	
+	
+	RewriteRule ^(.+)$ index.php?par1=$1 [L]
+
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+	ErrorDocument 404 /index.php
+</IfModule>
+
+
+
+<IfModule mod_headers.c>
+    # WEEK
+    <FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+
+    # WEEK
+    <FilesMatch "\.(js|css|swf)$">
+        Header set Cache-Control "max-age=604800"
+    </FilesMatch>
+</IfModule>
+
+

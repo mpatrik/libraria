@@ -1,0 +1,50 @@
+.inputarea input,
+.inputarea select,
+.inputarea textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 0;
+    outline: 1px solid #ccc;
+}
+
+.inputarea input:focus-visible,
+.inputarea select:focus-visible,
+.inputarea textarea:focus-visible {
+    outline: 2px solid var(--clr-secondary);
+}
+
+.inputarea input:focus + label,
+.inputarea input:not(:placeholder-shown) + label,
+.inputarea textarea:focus + label,
+.inputarea textarea:not(:placeholder-shown) + label {
+    opacity: 1;
+    transform: translateY(-24px);
+    color: var(--clr-secondary);
+    font-size: .9rem;
+}
+
+.form-error {
+    outline: 2px solid var(--clr-danger) !important;
+}
+
+.error-text {
+    font-size: .8rem;
+    color: var(--clr-danger);
+    position: absolute;
+    right: 0;
+    top: -18px;
+}
+
+.modal-icon {
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
+}
+
+.modal-fail-icon {
+    color: var(--clr-danger);
+}
+
+.modal-success-icon {
+    color: var(--clr-success);
+}

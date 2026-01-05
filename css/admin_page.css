@@ -1,0 +1,110 @@
+.admin-container {
+    width: 1300px;
+    margin-inline: auto;
+}
+
+
+.admin-tab-btn {
+    height: 40px;
+    width: 130px;
+    border: 1px solid #ccc;
+    background: transparent;
+    color: var(--clr-primary);
+}
+
+.admin-content {
+    margin-top: 30px;
+}
+
+.products-table {
+    width: 100%;
+}
+
+.products-table th {
+    padding: 10px;
+    background: var(--clr-secondary);
+}
+
+.products-table__content td {
+    padding: 10px;
+}
+
+.products-table__content tr:nth-of-type(2n) {
+    background: #eee;
+}
+
+td:has(.update-product, .delete-product) {
+    background: white;
+}
+
+.update-product,
+.delete-product {
+    background: transparent;
+    border: 0;
+    margin-left: 15px;
+}
+
+.update-product {
+    font-size: 1.1rem;
+}
+
+.delete-product {
+    color: var(--clr-danger);
+}
+
+.admin__single-product .title:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (max-width: 1300px) {
+    .admin-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .products-table th {
+        display: none;
+    }
+
+    .products-table__content td {
+        display: grid;
+        grid-template-columns: 100px auto;
+        gap: 2rem;
+        padding-block: 0;
+    }
+
+    .products-table__content td:first-child {
+        padding-top: 1rem;
+    }
+
+    .products-table__content td:nth-child(7) {
+        padding-bottom: 1rem;
+    }
+
+    .products-table__content tr {
+        position: relative;
+    }
+
+    td:has(.update-product, .delete-product) {
+        position: absolute;
+        right: -25px;
+        background: transparent;
+    }
+
+    td:has(.update-product) {
+        bottom: 1rem;
+    }
+
+    td:has(.delete-product) {
+        top: 1rem;
+    }
+
+    .products-table__content td:not(:has(.update-product, .delete-product))::before {
+        content: attr(data-cell) ":";
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+}

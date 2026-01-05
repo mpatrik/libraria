@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --clr-primary: #003333;
+    --clr-secondary: #00c1a1;
+    --clr-light: #cbffcb;
+    --clr-danger: #d42a41;
+    --clr-success: #198754;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--clr-primary);
+    font-family: Noto Sans, sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+body::-webkit-scrollbar {
+    background-color: var(--clr-primary);
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--clr-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #01d8b6;
+}
+
+
+.bg-custom-primary {
+    background: var(--clr-primary);
+}
+
+.bg-custom-secondary {
+    background: var(--clr-secondary);
+}
+
+.bg-custom-light {
+    background: var(--clr-light);
+}
+
+.bg-custom-danger {
+    background: var(--clr-danger);
+}
+
+.text-custom-primary {
+    color: var(--clr-primary);
+}
+
+.text-custom-secondary {
+    color: var(--clr-secondary);
+}
+
+.text-custom-light {
+    color: var(--clr-light);
+}
+
+.text-custom-danger {
+    color: var(--clr-danger);
+}
+
+.title-font {
+    font-family: Noto Serif, serif;
+}

@@ -1,0 +1,134 @@
+.single-product {
+    width: 1300px;
+    margin-inline: auto;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+    font-size: .8rem;
+}
+
+.breadcrumb-item a {
+    color: var(--clr-primary);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+    color: var(--clr-secondary);
+}
+/* BREADCRUMB END */
+
+
+.content-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.content__img {
+    height: 460px;
+    width: 300px;
+    object-fit: cover;
+    box-shadow: 0 0 50px 5px #999;
+    margin-inline: auto;
+    position: sticky;
+    top: 1rem;
+}
+
+.content__details {
+    min-width: 300px;
+    max-width: 600px;
+    font-size: .9rem;
+    margin-inline: auto;
+}
+
+.details__author,
+.details__basics,
+.infos__data {
+    color: #777;
+}
+
+.details__rating {
+    font-size: 1rem;
+}
+
+.details__basics span {
+    padding-inline: 8px;
+    border-right: 2px solid #ccc;
+}
+
+.details__basics span:first-child {
+    padding-left: 0;
+}
+
+.details__basics span:last-child {
+    padding-right: 0;
+    border-right: none;
+}
+
+.basics__language-icon {
+    height: 18px;
+    width: 30px;
+    object-fit: cover;
+    transform: translateY(-2px);
+}
+
+.details__synopsis {
+    text-align: justify;
+}
+
+.infos > div {
+    padding-block: .8rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+.infos__label {
+    width: 50%;
+    font-weight: bold;
+}
+
+.infos__data {
+    width: 50%;
+    font-weight: 500;
+}
+
+.to-cart {
+    margin-inline: auto;
+}
+
+.to-cart__price {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.to-cart__btn {
+    height: 50px;
+    width: 200px;
+    display: block;
+    margin-inline: auto;
+    margin-top: 25px;
+}
+
+
+
+@media (max-width: 1300px) {
+    .single-product {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1163px) {
+    .to-cart {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 979px) {
+    .content__img {
+        position: initial;
+    }
+}
